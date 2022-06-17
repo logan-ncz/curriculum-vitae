@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/curriculum-vitae/static/css/main.f2613340.css",
-    "main.js": "/curriculum-vitae/static/js/main.eb7df8d9.js",
+    "main.js": "/curriculum-vitae/static/js/main.50289b60.js",
     "static/media/Lato-Semibold.ttf": "/curriculum-vitae/static/media/Lato-Semibold.d585c7df44df3024c49b.ttf",
     "static/media/Lato-Regular.ttf": "/curriculum-vitae/static/media/Lato-Regular.80c07943565d91b976e1.ttf",
     "static/media/Lato-Bold.ttf": "/curriculum-vitae/static/media/Lato-Bold.bb154e8dcbf157f82e9b.ttf",
@@ -12,10 +12,10 @@
     "static/media/musculation.png": "/curriculum-vitae/static/media/musculation.7979d3547606d5fff11f.png",
     "index.html": "/curriculum-vitae/index.html",
     "main.f2613340.css.map": "/curriculum-vitae/static/css/main.f2613340.css.map",
-    "main.eb7df8d9.js.map": "/curriculum-vitae/static/js/main.eb7df8d9.js.map"
+    "main.50289b60.js.map": "/curriculum-vitae/static/js/main.50289b60.js.map"
   },
   "entrypoints": [
     "static/css/main.f2613340.css",
-    "static/js/main.eb7df8d9.js"
+    "static/js/main.50289b60.js"
   ]
 }
