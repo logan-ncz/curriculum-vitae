@@ -16,7 +16,7 @@ function App() {
           </h1>
           <div className="statut">
             <p>
-              <span>Dévelo</span>ppeur Front-End junior disponible immédiatement
+              <span>Dévelo</span>ppeur Front-End
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ function App() {
           </h1>
           <div className="statut">
             <p>
-              <span>Dévelo</span>ppeur Front-End en formation
+              <span>Dévelo</span>ppeur Front-End
             </p>
           </div>
         </div>
