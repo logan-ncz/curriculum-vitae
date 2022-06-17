@@ -49,7 +49,7 @@ function App() {
           <div className="aside_container">
             <p>Flexbox</p>
             <p>JavaScript</p>
-            <p>ReactJS</p>
+            <p>React.js</p>
             <p>Sass</p>
             <p>Redux et React Redux</p>
             <p>Git et Github</p>
