@@ -1,6 +1,6 @@
 /* 
 
-CV de Logan Nochez
+Curriculum Vitae
 
 Par
 
@@ -11,40 +11,49 @@ Logan Nochez
 /* Import des variables sass */
 @import '../variables/variables';
 
-/* Définition des polices personnalisées */
-
-@font-face {
-  font-family: 'lato-regular';
-  src: url('../../lato/Lato-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'lato-medium';
-  src: url('../../lato/Lato-Medium.ttf') format('truetype');
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@font-face {
-  font-family: 'lato-light';
-  src: url('../../lato/Lato-Light.ttf') format('truetype');
+@keyframes itemAppear {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 
-@font-face {
-  font-family: 'lato-semibold';
-  src: url('../../lato/Lato-Semibold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'lato-bold';
-  src: url('../../lato/Lato-Bold.ttf') format('truetype');
+@keyframes imageRadius {
+  0% {
+    border-radius: 0%;
+  }
+  100% {
+    border-radius: 100%;
+  }
 }
 
 /* Elements principaux de la page */
 
 body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+}
+
+#root {
   background: linear-gradient(
     90deg,
     rgba(217, 185, 82, 1) 0%,
     rgba(65, 65, 67, 1) 50%
   );
+  padding: 1em 0;
 }
 
 .bloc_page {
@@ -56,17 +65,20 @@ body {
 }
 
 h1 {
-  font-family: 'lato-light', Arial, sans-serif;
   font-size: 2.9em;
   font-weight: normal;
   text-transform: uppercase;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
 
   span {
     color: $color_secondary;
-    font-family: 'lato-medium', Arial, sans-serif;
   }
 }
 
@@ -76,11 +88,11 @@ h1 {
 }
 
 a {
-  color: $color_secondary;
+  color: #fff;
 }
 
 strong {
-  font-family: 'lato-bold', Arial, sans-serif;
+  font-weight: 700;
 }
 
 /* Partie gauche ou "aside" */
@@ -99,7 +111,6 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'lato-medium', Arial, sans-serif;
     font-size: 1.5em;
     font-weight: normal;
     text-transform: uppercase;
@@ -126,15 +137,31 @@ aside {
 }
 
 .aside_container {
-  font-family: 'lato-medium', Arial, sans-serif;
   font-size: 1em;
   color: #fff;
   width: 80%;
   margin: auto;
+
+  svg {
+    width: 1em;
+    fill: #fff;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 .hard_skills div {
-  font-family: 'lato-bold', Arial, sans-serif;
+  font-weight: 700;
 }
 
 .loisirs {
@@ -151,9 +178,14 @@ aside {
 /* Partie droite ou "contenu" */
 
 .statut p {
-  font-family: 'lato-semibold', Arial, sans-serif;
+  font-weight: 600;
   font-size: 1.5em;
   color: #4a4a4a;
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
 }
 
 p span {
@@ -169,7 +201,7 @@ p span {
   h2 {
     display: flex;
     align-items: center;
-    font-family: 'lato-bold', Arial, sans-serif;
+    font-weight: 700;
     font-size: 1.6em;
     border-bottom: 2px $color_secondary solid;
     text-transform: uppercase;
@@ -187,9 +219,7 @@ p span {
 }
 
 .diplomes_et_formations p,
-ul,
 .experiences_professionnelles p {
-  font-family: 'lato-medium', Arial, sans-serif;
   font-size: 1.1em;
   color: #404040;
 }
@@ -201,7 +231,7 @@ ul,
 }
 
 .soft_skills p {
-  font-family: 'lato-bold', Arial, sans-serif;
+  font-weight: 700;
   font-size: 1.1em;
   color: #404040;
 }
@@ -254,8 +284,9 @@ ul,
     margin: 0;
   }
 
-  aside .identite p {
+  aside .identite ul li {
     font-size: 1.3em;
     text-align: center;
+    list-style: none;
   }
 }
